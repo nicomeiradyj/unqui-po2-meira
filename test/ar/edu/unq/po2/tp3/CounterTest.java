@@ -91,5 +91,48 @@ public class CounterTest {
 	    assertEquals(0, counter.countMultiplesOf(8));
 	 }
 	 
+	 @Test
+	 public void testNumeroConMasDigitosPares() {
+		 // El que mas digitos pares tiene es el 2222.
+		Counter arrayNumeros = new Counter();
+		arrayNumeros.addNumber(1234);
+		arrayNumeros.addNumber(2222);
+		arrayNumeros.addNumber(1357);
+		arrayNumeros.addNumber(1284);
+	    assertEquals(2222, arrayNumeros.numeroConMasDigitosPares());
+	 }
+	 
+	 @Test
+	 public void testNumeroConMasDigitosParesTeniendoA2NumerosConLaMismaCantidad() {
+		 // Los numeros que mas digitos pares tienen son: el 2222 y el 2284. El sistema devuelve automaticamente el primero con mas cantidad de digitos pares.
+		Counter arrayNumeros = new Counter();
+		arrayNumeros.addNumber(1234);
+		arrayNumeros.addNumber(2222);
+		arrayNumeros.addNumber(1357);
+		arrayNumeros.addNumber(2284);
+	    assertEquals(2222, arrayNumeros.numeroConMasDigitosPares());
+	 }
+	 
+	 @Test
+	 public void testNumeroConMasDigitosParesTeniendoANumerosNegativos() {
+		 // Los numeros que mas digitos pares tienen son: el 2222 y el 2284. El sistema devuelve automaticamente el primero con mas cantidad de digitos pares.
+		Counter arrayNumeros = new Counter();
+		arrayNumeros.addNumber(-1234);
+		arrayNumeros.addNumber(-2222);
+		arrayNumeros.addNumber(-1357);
+		arrayNumeros.addNumber(-2284);
+	    assertEquals(-2222, arrayNumeros.numeroConMasDigitosPares());
+	 }
+	 
+	 @Test
+	 public void testMultiploMasAltoDe() {
+	    assertEquals(999, counter.multiploMasAltoDe(3, 9));
+	 }
+	 
+	 @Test
+	 public void testMultiploMasAltoDeCon0() {
+	    assertEquals(-1, counter.multiploMasAltoDe(0, 9));
+	 }
+	 
 }
 

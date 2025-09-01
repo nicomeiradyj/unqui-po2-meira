@@ -45,4 +45,38 @@ public class Counter {
 		return count;
 	}
 	
+	public int numeroConMasDigitosPares() {
+		int maxPares = -1;
+		int maxNumero = 0;
+		for (Integer n : numeros) {
+			int copiaDeN = Math.abs(n); 
+			int contadorDePares = 0;
+			while (copiaDeN > 0) {
+				int ultimo = copiaDeN % 10; // agarro el ultimo digito de N
+				if( ultimo % 2 == 0) {
+					contadorDePares++;
+				}
+				copiaDeN = copiaDeN / 10; // saco el ultimo digito del numero
+			}
+			if (contadorDePares > maxPares) {
+				maxPares = contadorDePares;
+				maxNumero = n;
+			}
+		}
+		return maxNumero;
+	}
+	
+	public int multiploMasAltoDe(int x, int y) {
+		if(x == 0 || y == 0) {
+			return -1;
+		}
+		for(int n = 1000; n >= 0; n--) {
+			if(n % x == 0 && n % y == 0) {
+				return n;
+			}
+		}
+		return -1;
+	}
+	
+	
 }
