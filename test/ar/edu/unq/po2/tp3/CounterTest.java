@@ -134,5 +134,73 @@ public class CounterTest {
 	    assertEquals(-1, counter.multiploMasAltoDe(0, 9));
 	 }
 	 
+	 @Test
+	 public void testEjercicio4A() {
+		 String a = "abc";
+		 assertEquals(3, a.length());
+	 }
+	 
+	 @Test
+	 public void testEjercicio4AParteDos() {
+		 String a = "abc";
+		 String s = a;	
+		 assertEquals(3, s.length());
+	 }
+	 
+	 // Ejercicio 4.B:
+	 /*
+	 @Test
+	 public void testEjercicio4B() {
+		 String t;							ESTO FALLA PORQUE LA VARIABLE T NO FUE INICIALIZADA, SI YO LE PIDO EL LENGHT LE ESTARIA PIDIENDO A UNA VARIABLE VACIA Y DA ERROR.
+		 assertEquals(0, t.length());
+	 }
+	 */
+	 
+	 @Test
+	 public void testEjercicio4C() {
+		 String a = "abc";
+		 assertEquals("1abc", 1 + a);
+	 }
+	 
+	 @Test
+	 public void testEjercicio4D() {
+		 String a = "abc";
+		 assertEquals("ABC", a.toUpperCase());
+	 }
+	 
+	 @Test
+	 public void testEjercicio4E() {
+		 assertEquals(4, "Libertad".indexOf("r"));  // El numero de indice es 4 porque empieza en 0.
+	 }
+	 
+	 @Test
+	 public void testEjercicio4F() {	
+		 assertEquals(7, "Universidad".lastIndexOf("i"));
+	 }
+	 
+	 @Test
+	 public void testEjercicio4G() {	
+		 assertEquals("il", "Quilmes".substring(2, 4));
+	 }
+	 
+	 @Test
+	 public void testEjercicio4H() {
+		 String a = "abc";
+		 assertEquals(false, (a.length() + a).startsWith("a"));
+	 }
+	 
+	 @Test
+	 public void testEjercicio4I() {
+		 String a = "abc";
+		 String s = a;	
+		 assertEquals(true, s == a);
+	 }
+	 
+	 @Test
+	 public void testEjercicio4J() {
+		 String a = "abc";
+		 assertEquals(true, a.substring(1, 3).equals("bc"));
+	 }
+	 
 }
 
