@@ -29,8 +29,8 @@ public class Producto {
 		return this.esPrecioCuidado;
 	}
 	
-	public void aumentarPrecio() {
-		this.precio = this.precio++;
+	public void aumentarPrecio(double aumento) {
+		this.precio += aumento;
 	}
 	
 }

@@ -1,4 +1,4 @@
-package supermercado;
+package ar.edu.unq.poo2.tp4.test.supermercado;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,6 +18,6 @@ public class ProductoPrimeraNecesidadTest {
 	
 	@Test
 	public void testCalcularPrecio() {
-		assertEquals(new Double(7.2), leche.getPrecio());
+		assertEquals(7.2, leche.getPrecio());
 	}
 }

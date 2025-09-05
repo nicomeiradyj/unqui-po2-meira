@@ -18,7 +18,14 @@ public class Supermercado {
 		return this.productos.size();
 	}
 	
-	public void agregarProducto(Producto productoAAgregar);{
+	public void agregarProducto(Producto productoAAgregar) {
 		this.productos.add(productoAAgregar);
+	}
+	public Double getPrecioTotal() {
+		double total = 0;
+		for (Producto prod : this.productos) {
+			total = total + prod.getPrecio();
+		}
+		return total;
 	}
 }
