@@ -1,6 +1,6 @@
 package ar.edu.unq.po2.tp6;
 
-public class SolicitudDeCredito {
+public abstract class SolicitudDeCredito {
 	Cliente cliente;
 	double montoSolicitado;
 	int plazoEnMeses;
@@ -12,9 +12,9 @@ public class SolicitudDeCredito {
 	}
 	
 	public double montoCuotaMensual() {
-		return this.montoSolicitado/this.plazoEnMeses;
+		return this.montoSolicitado / this.plazoEnMeses;
 	}
 	
-	
+	public abstract boolean sePuedeAceptar();
 	
 }

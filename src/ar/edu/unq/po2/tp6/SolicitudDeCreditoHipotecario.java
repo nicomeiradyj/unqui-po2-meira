@@ -10,13 +10,25 @@ public class SolicitudDeCreditoHipotecario extends SolicitudDeCredito{
 	}
 	
 	public boolean sePuedeAceptar() {
-		return this.montoCuotaMensual() < cliente.sueldoMensual &&
-				this.montoSolicitado < this.garantia.valorFiscal * 0.7 && 
-				cliente.edad < 65;
+		return this.montoMensualNoSuperaLaMitadDeLosIngresosMensualesDelTitular() &&
+				this.montoSolicitadoNoSuperaElSetentaPorCientoDelValorFiscalDeLaGarantia() && 
+				this.edadDeClienteNoSuperaLos65AntesDeTerminarDePagarElCredito();
 	}
 	
 	public boolean montoMensualNoSuperaLaMitadDeLosIngresosMensualesDelTitular() {
 		return this.montoCuotaMensual() < cliente.sueldoMensual;
+	}
+	
+	public boolean montoSolicitadoNoSuperaElSetentaPorCientoDelValorFiscalDeLaGarantia() {
+		return this.montoSolicitado < this.garantia.valorFiscal * 0.7;
+	}
+	
+	public boolean edadDeClienteNoSuperaLos65AntesDeTerminarDePagarElCredito() {
+		return edadDeClienteDespuesDeTerminarDePagarElCredito() < 65;
+	}
+	
+	public int edadDeClienteDespuesDeTerminarDePagarElCredito() {
+		return cliente.edad + (this.plazoEnMeses / 12);
 	}
 	
 }
