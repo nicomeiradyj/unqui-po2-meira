@@ -11,4 +11,5 @@ public class PropiedadInmobiliaria {
 		this.valorFiscal = valorFiscal;
 	}
 	
+	
 }
