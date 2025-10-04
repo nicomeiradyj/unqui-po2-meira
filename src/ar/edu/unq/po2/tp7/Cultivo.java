@@ -1,5 +1,5 @@
 package ar.edu.unq.po2.tp7;
 
-public class Cultivo {
-	
+public abstract class Cultivo {
+	public abstract double precioPorHectarea();
 }

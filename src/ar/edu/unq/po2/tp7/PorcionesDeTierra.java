@@ -1,5 +1,9 @@
 package ar.edu.unq.po2.tp7;
 
-public class PorcionesDeTierra {
+public interface PorcionesDeTierra {
+
+	double gananciaAnual();
+	double gananciaPlantacion(Cultivo plantacion);
+		
 	
 }
