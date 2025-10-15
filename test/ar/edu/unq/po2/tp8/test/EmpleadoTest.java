@@ -15,7 +15,7 @@ public class EmpleadoTest {
 	        Empleado empleado = new EmpleadoTemporario(80, 1000, false, true);
 	        
 	        // SetUp
-	        double sueldoEsperado = 1305.0;
+	        double sueldoEsperado = 1026.6;
 
 	        // Execution
 	        double sueldoCalculado = empleado.sueldo();

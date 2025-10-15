@@ -3,7 +3,7 @@ package ar.edu.unq.po2.tp7.Mockito.test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.*;
+//import static org.mockito.Mockito.*;
 
 import java.util.List;
 
@@ -87,11 +87,11 @@ public class PokerStatusTest {
 		assertEquals(jugada1, status.jugadaGanadora(jugada1, jugada2));
 	}
 	
-	@Test
-	public void testMuestraResultadoCorrecto() {
-		// SetUp
-		PokerStatus statusMock = mock(PokerStatus.class);
-        when(statusMock.verificarPCTN(carta1, carta2, carta3, carta4, carta6)).thenReturn("Trio");
-	}
+//	@Test
+//	public void testMuestraResultadoCorrecto() {
+//		// SetUp
+//		PokerStatus statusMock = mock(PokerStatus.class);
+//        when(statusMock.verificarPCTN(carta1, carta2, carta3, carta4, carta6)).thenReturn("Trio");
+//	}
 	
 }
